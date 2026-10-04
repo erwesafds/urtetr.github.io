@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>余阳天的网盘 - 安全便捷的个人云存储</title>
+  <link rel="icon" type="image/png" href="https://urtetr.github.io/favicon.png">
+  <meta name="msvalidate.01" content="C6227A297CDC29BE01ED37146165310D" />
+  <meta name="description" content="余阳天的网盘，提供安全、稳定、高速的个人云存储服务，支持多端访问与文件在线管理。">
+  <meta name="keywords" content="余阳天的网盘,个人网盘,云存储,在线文件管理,OpenList">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      min-height: 100vh;
+      color: #fff;
+      background: #0f172a;
+      overflow-x: hidden;
+    }
+
+    /* 背景图 + 深色遮罩，保证文字可读 */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: url("https://urtetr.github.io/bg.jpg") center / cover no-repeat fixed;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(135deg, rgba(10, 20, 40, 0.75), rgba(10, 20, 40, 0.55));
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .logo {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      opacity: 0.85;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    /* 毛玻璃特性卡片 */
+    .card {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(16px) saturate(150%);
+      -webkit-backdrop-filter: blur(16px) saturate(150%);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 6px;
+      font-size: 13px;
+      opacity: 0.95;
+    }
+
+    .feature img {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* 主按钮 */
+    .enter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #0f172a;
+      background: #fff;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .enter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+    .enter-btn img { width: 22px; height: 22px; }
+
+    .tips {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.7;
+      line-height: 1.8;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 40px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 24px; }
+      .features { grid-template-columns: repeat(3, 1fr); }
+      .feature { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://urtetr.github.io/favicon.png" alt="余阳天的网盘 Logo">
+
+    <h1>余阳天的网盘</h1>
+    <p class="subtitle">
+      安全 · 稳定 · 高速的个人云存储服务<br>
+      支持文件上传、在线浏览与多端访问
+    </p>
+
+    <div class="card">
+      <div class="features">
+        <div class="feature">
+          <img src="https://urtetr.github.io/icon-safe.png" alt="安全">
+          <span>安全加密</span>
+        </div>
+        <div class="feature">
+          <img src="https://urtetr.github.io/icon-fast.png" alt="高速">
+          <span>高速传输</span>
+        </div>
+        <div class="feature">
+          <img src="https://urtetr.github.io/icon-device.png" alt="多端">
+          <span>多端同步</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p style="font-size:14px;line-height:1.9;opacity:.9;">
+        点击下方按钮进入网盘，即可开始管理你的文件。<br>
+        首次访问可能需要几秒钟加载，请耐心等待。
+      </p>
+    </div>
+
+    <a class="enter-btn" href="https://kduqksgu.cn-hk1.rainapp.top" rel="noopener">
+      <img src="https://urtetr.github.io/icon-enter.png" alt="">
+      进入网盘
+    </a>
+
+    <p class="tips">如无法打开，请检查网络连接或稍后重试。</p>
+
+    <footer>© 余阳天的网盘 · Powered by OpenList</footer>
+  </div>
+</body>
+</html>
