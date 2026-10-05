@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erwesafds.github.io/urtetr.github.io/sitemap.xml
